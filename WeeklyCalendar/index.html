@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Planner</title>
+  </head>
+  <body>
+    <header class="container bg-black t-white">
+      <h2>Weekly Planner</h2>
+      <div class="tools">Tools</div>
+    </header>
+    <main class="bg-black pad-center max t-white">
+      <div class="container col card">
+        <div class="container col">
+          <p>Start organizing your life.</p>
+          <p>Get started and...</p>
+        </div>
+      </div>
+      <div class="btns">
+        <div class="popup">
+          <div class="popup-card">
+            <label for="title">Name:</label>
+            <input id="nameTask" name="title" type="text" required />
+            <select id="daysField" name="daysField" required>
+              <option value="lunes">Lunes</option>
+              <option value="martes">Martes</option>
+              <option value="miercoles">Miercoles</option>
+              <option value="jueves">Jueves</option>
+              <option value="viernes">Viernes</option>
+              <option value="sabado">Sabado</option>
+              <option value="domingo">Domingo</option>
+            </select>
+            <div class="btns">
+              <button id="close" class="btn">Close</button>
+              <button id="add" class="btn">Add</button>
+            </div>
+          </div>
+        </div>
+        <button id="cre" class="btn">Create Task</button>
+      </div>
+      <div class="container days">
+        <div class="container col">
+          <h2>L</h2>
+          <div class="tasks-container" id="lunes"></div>
+        </div>
+        <div class="container col">
+          <h2>M</h2>
+          <div class="tasks-container" id="martes"></div>
+        </div>
+        <div class="container col">
+          <h2>M</h2>
+          <div class="tasks-container" id="miercoles"></div>
+        </div>
+        <div class="container col">
+          <h2>J</h2>
+          <div class="tasks-container" id="jueves"></div>
+        </div>
+        <div class="container col">
+          <h2>V</h2>
+          <div class="tasks-container" id="viernes"></div>
+        </div>
+        <div class="container col">
+          <h2>S</h2>
+          <div class="tasks-container" id="sabado"></div>
+        </div>
+        <div class="container col">
+          <h2>D</h2>
+          <div class="tasks-container" id="domingo"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script src="script.js"></script>
