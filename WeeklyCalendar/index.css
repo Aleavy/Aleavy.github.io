@@ -39,7 +39,7 @@ h2 {
   display: grid;
 
   grid-template-columns: 1fr;
-  word-break: break-all;
+  word-break: break-word;
   grid-auto-rows: minmax(100px, auto);
   grid-auto-columns: minmax(50px, auto);
 }
@@ -150,7 +150,7 @@ header {
   font-size: 18px;
   border: 0px solid black;
   border-radius: 12px;
-  max-width: 20%;
+  max-width: 200px;
 }
 
 .btn-destroy {
@@ -227,3 +227,4 @@ header {
   color: white;
   background-color: rgba(0, 128, 0, 0.637);
 }
+
