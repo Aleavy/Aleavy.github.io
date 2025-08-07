@@ -11,11 +11,16 @@
     <title>Weekly Planner</title>
   </head>
   <body>
-    <header class="container bg-black t-white">
+    <header class="container">
       <h2>Weekly Planner</h2>
-      <div class="tools">Tools</div>
+      <div class="tools">
+        Tools
+        <div class="dropdown">
+          <button id="clear">Clear</button>
+        </div>
+      </div>
     </header>
-    <main class="bg-black pad-center max t-white">
+    <main class="">
       <div class="container col card">
         <div class="container col">
           <p>Start organizing your life.</p>
@@ -44,34 +49,34 @@
         </div>
         <button id="cre" class="btn">Create Task</button>
       </div>
-      <div class="container days">
-        <div class="container col">
+      <div class="container-grid">
+        <div class="container-day">
           <h2>L</h2>
-          <div class="tasks-container" id="lunes"></div>
+          <div class="container-task" id="lunes"></div>
         </div>
-        <div class="container col">
+        <div class="container-day">
           <h2>M</h2>
-          <div class="tasks-container" id="martes"></div>
+          <div class="container-task" id="martes"></div>
         </div>
-        <div class="container col">
+        <div class="container-day">
           <h2>M</h2>
-          <div class="tasks-container" id="miercoles"></div>
+          <div class="container-task" id="miercoles"></div>
         </div>
-        <div class="container col">
+        <div class="container-day">
           <h2>J</h2>
-          <div class="tasks-container" id="jueves"></div>
+          <div class="container-task" id="jueves"></div>
         </div>
-        <div class="container col">
+        <div class="container-day">
           <h2>V</h2>
-          <div class="tasks-container" id="viernes"></div>
+          <div class="container-task" id="viernes"></div>
         </div>
-        <div class="container col">
+        <div class="container-day">
           <h2>S</h2>
-          <div class="tasks-container" id="sabado"></div>
+          <div class="container-task" id="sabado"></div>
         </div>
-        <div class="container col">
+        <div class="container-day">
           <h2>D</h2>
-          <div class="tasks-container" id="domingo"></div>
+          <div class="container-task" id="domingo"></div>
         </div>
       </div>
     </main>

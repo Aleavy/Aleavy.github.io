@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Roboto";
+:root {
+  --bg-white: white;
+  --bg-black: black;
+  --bg-gray: rgb(255, 251, 251);
+  --white-shadow: 0px 4px 10px 2px rgb(87, 77, 77);
 }
 
-.t-white {
-  color: white;
+body {
+  font-family: "Roboto";
 }
 
 h2 {
@@ -24,8 +27,40 @@ h2 {
   flex-wrap: wrap;
 }
 
+.container-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.container-task {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  word-break: break-all;
+  grid-auto-rows: minmax(100px, auto);
+  grid-auto-columns: minmax(50px, auto);
+}
+
+hr {
+  width: 100%;
+  color: gray;
+  height: 1px;
+}
+
+.added-task {
+  border: 1px solid white;
+  font-weight: 500;
+  padding: 4px 6px;
+  border-radius: 6px;
+  min-width: 100px;
+  text-align: center;
+}
+
 .card {
-  box-shadow: 0px 4px 10px 2px rgb(87, 77, 77);
+  box-shadow: var(--white-shadow);
   border-radius: 10px;
   line-height: 30px;
   font-size: 1.5rem;
@@ -36,20 +71,28 @@ h2 {
 
 .container-grid {
   display: grid;
+  padding: 0 20px;
+  align-items: start;
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .col {
   flex-direction: column !important;
 }
 
-.max {
-  height: 100vh;
+main {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: var(--bg-black);
+  color: white;
 }
 
 header {
   width: 100%;
+  background-color: var(--bg-black);
   justify-content: space-around !important;
   padding: 20px;
+  color: white;
   border-bottom: 2px solid white;
 }
 
@@ -59,18 +102,30 @@ header {
   pad: 10px;
   font-size: larger;
   position: relative;
+  cursor: pointer;
 }
 
-.bg-white {
-  background-color: white;
+.dropdown {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+
+  & > button {
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
-.bg-black {
-  background-color: black;
-}
-
-.bg-gray {
-  background-color: rgb(255, 251, 251);
+.dropdown.active {
+  display: flex;
 }
 
 .days {
@@ -78,7 +133,7 @@ header {
   align-items: start;
   gap: 4rem;
   min-height: 600px;
-  box-shadow: 0px 4px 10px 2px rgb(87, 77, 77);
+  box-shadow: var(--white-shadow);
   overflow-y: scroll;
 
   & > * {
@@ -86,20 +141,26 @@ header {
   }
 }
 
-.pad-center {
-  padding: 0 20%;
-}
-
 .btn {
   cursor: pointer;
   padding: 12px 2px;
-  box-shadow: 0px 4px 10px 2px rgb(87, 77, 77);
-  background-color: white;
+  box-shadow: var(--white-shadow);
+  background-color: var(--bg-white);
   width: 100%;
   font-size: 18px;
   border: 0px solid black;
   border-radius: 12px;
   max-width: 20%;
+}
+
+.btn-destroy {
+  background-color: rgb(228, 16, 16, 7);
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .popup {
@@ -122,9 +183,9 @@ header {
 .popup-card {
   padding: 20px 30px;
   width: 50%;
-  box-shadow: 0px 4px 10px 2px rgb(87, 77, 77);
+  box-shadow: var(--white-shadow);
   display: flex;
-  background-color: black;
+  background-color: var(--bg-black);
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -157,4 +218,12 @@ header {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+#close {
+  color: white;
+  background-color: var(--bg-black);
+}
+#add {
+  color: white;
+  background-color: rgba(0, 128, 0, 0.637);
 }
